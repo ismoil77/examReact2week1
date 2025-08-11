@@ -11,7 +11,7 @@ import {
   EditUser,
   GetData,
 } from './reducers/TodoSlice'
-import type { AppDispatch, RootState } from './store'
+import type { AppDispatch, RootState } from './store/store'
 
 interface Todo {
   id: string
@@ -85,7 +85,7 @@ function App() {
             <button
               className='bg-blue-500 text-white px-4 py-2 rounded'
               onClick={() => {
-                dispatch(AddDataImg(addImg))
+                dispatch(AddDataImg(addImg as any))
                 setAddModalImg(false)
               }}
             >
