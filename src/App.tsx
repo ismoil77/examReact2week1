@@ -1,4 +1,5 @@
-import { useEffect, useState, ChangeEvent } from 'react'
+import { useEffect, useState } from 'react'
+import type { ChangeEvent } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import './App.css'
 import MySwiperImg from './components/SwiperImg/Swiper'
@@ -201,7 +202,7 @@ function App() {
       </button>
 
       <div className='flex space-y-4 flex-wrap gap-4'>
-        {data.map(item => (
+        {data.map((item: any) => (
           <div
             key={item.id}
             className='border p-4 rounded shadow-xl hover:shadow-2xl transition w-[450px] h-[600px] flex flex-col justify-between bg-white'
